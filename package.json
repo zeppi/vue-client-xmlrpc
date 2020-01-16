@@ -1,0 +1,35 @@
+{
+  "name": "vue-client-xmlrpc",
+  "version": "0.0.1",
+  "description": "An XML-RPC client with axios",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha"
+  },
+  "dependencies": {
+    "axios": "^0.19.1",
+    "sax": "1.2.x",
+    "valid-url": "^1.0.9",
+    "xmlbuilder": "8.2.x"
+  },
+  "main": "./lib/xmlrpc.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeppi/vue-client-xmlrpc.git"
+  },
+  "keywords": [
+    "xml-rpc",
+    "xmlrpc"
+  ],
+  "author": "zeppilabs@protonmail.ch",
+  "bugs": {
+    "url": "https://github.com/zeppi/vue-client-xmlrpc/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zeppi/vue-client-xmlrpc#readme",
+  "devDependencies": {
+    "mocha": "^7.0.0"
+  }
+}
