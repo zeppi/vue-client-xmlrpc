@@ -29,5 +29,6 @@ describe('XmlRpc', function() {
 
         assert.equal(o._encodeMethod('anAction', [['string1', 3]]), exptected);        
     });
+
   });
 });
