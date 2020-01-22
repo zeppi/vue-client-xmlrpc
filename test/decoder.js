@@ -203,6 +203,15 @@
             const v = o.decode(response)
             assert.deepEqual(v, [2, {'Name1': 2, 'Name2': 3}, {'Name1': 3, 'Name2': 4}]);
         });
+
+        it('Array bug', function() {
+            const response = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<methodResponse><params><param><value><array><data><value><struct><member><name>id</name><value><int>2</int></value></member><member><name>truc</name><value><string>zz</string></value></member></struct></value><value><struct><member><name>id</name><value><int>1</int></value></member><member><name>truc</name><value><string>zz</string></value></member></struct></value></data></array></value></param></params></methodResponse>"
+
+            const o = new Decoder()
+            const v = o.decode(response)
+            assert.deepEqual(v, [{'id': 2, 'truc': 'zz'}, {'id': 1, 'truc': 'zz'}]);
+        });
+
       });
 
       describe('#Simple Type', function() {
