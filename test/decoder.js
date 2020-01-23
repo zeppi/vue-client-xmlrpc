@@ -309,5 +309,15 @@
             assert.equal(v.message, 'Too many parameters.');
         }); 
 
+        it('Bug 2', function() {
+            const response = "<?xml version=\"1.0\"?>\n" +
+            "<methodResponse><params><param><value><struct><member><name>id</name><value><int>909</int></value></member><member><name>params</name><value><string>44</string></value></member></struct></value></param></params></methodResponse>";
+            
+            const o = new Decoder()
+            const v = o.decode(response)
+
+            assert.deepEqual(v, { id: 909, params: '44' });
+        }); 
+
       });
   });
