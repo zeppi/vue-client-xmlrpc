@@ -6,7 +6,7 @@
     "test": "node ./node_modules/mocha/bin/mocha"
   },
   "dependencies": {
-    "axios": "^0.19.1",
+    "axios": "^0.21.1",
     "sax": "1.2.x",
     "valid-url": "^1.0.9",
     "xmlbuilder": "8.2.x"
